@@ -9,7 +9,6 @@
   --bg-base: #050508;
   --bg-panel: #0c0c14;
   --bg-card: #10101c;
-  --bg-hover: #181828;
 
   --green: #00ff9f;
   --green-dim: #00b36e;
@@ -378,18 +377,24 @@ section {
     rgba(0, 255, 159, 0.04) 4px
   );
   pointer-events: none;
+  z-index: 2;
 }
 
 .avatar-border-anim {
   position: absolute;
   inset: -2px;
-  border: 2px solid transparent;
   border-radius: var(--radius);
-  background:
-    linear-gradient(var(--bg-panel), var(--bg-panel)) padding-box,
-    linear-gradient(45deg, var(--green), var(--cyan), var(--purple), var(--green)) border-box;
+  background: linear-gradient(45deg, var(--green), var(--cyan), var(--purple), var(--green)) border-box;
   background-size: 200% 200%;
   animation: border-rotate 4s linear infinite;
+  z-index: 3;
+  pointer-events: none;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
 }
 
 @keyframes border-rotate {
@@ -711,11 +716,6 @@ section {
 
 .learn-list li:last-child { border-bottom: none; }
 .learn-list li:hover { color: var(--text-primary); }
-
-.li-arrow {
-  color: var(--green);
-  flex-shrink: 0;
-}
 
 /* =========================================================
    PELÍCULAS

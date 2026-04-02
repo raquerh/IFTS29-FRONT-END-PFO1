@@ -6,7 +6,7 @@ Este es la **Practica Formativa Obligatoria N° 1** de la materia FRONT END, cor
 
 Landing page de portfolio personal construida con **HTML5 y CSS3 puro** (sin frameworks ni librerías de JS). El diseño sigue una estética de terminal oscura / sci-fi, inspirada en el universo visual del anime cyberpunk y la ciencia ficción distópica.
 
-**URL publicada:** _[completar con link de Vercel tras el deploy]_
+**URL publicada:** https://ifts-29-front-end-pfo-1.vercel.app/
 
 ---
 
