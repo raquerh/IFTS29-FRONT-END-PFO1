@@ -930,95 +930,132 @@ footer {
   margin-top: 4rem;
   border-top: 1px solid var(--border);
   background: rgba(12, 12, 20, 0.7);
+  padding: 3rem 2rem 2rem;
 }
 
-.footer-inner {
+.footer-terminal {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  margin: 0 auto 2rem;
+  font-family: var(--font-mono);
 }
 
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.footer-name {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text-primary);
-}
-
-.footer-sub {
-  font-size: 0.72rem;
-  color: var(--text-dim);
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.social-link {
+.terminal-line {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.82rem;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-symbol {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.command {
+  color: var(--cyan);
+  font-size: 0.85rem;
+}
+
+.terminal-output {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.output-name {
+  color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.output-role {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.output-info {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.terminal-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  font-size: 0.8rem;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.social-link svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.social-link:hover,
-.social-link:focus-visible {
+.terminal-link:hover,
+.terminal-link:focus-visible {
   color: var(--green);
-  border-color: var(--border-accent);
-  background: rgba(0, 255, 159, 0.05);
+  transform: translateX(4px);
   outline: none;
 }
 
-.social-link:hover svg,
-.social-link:focus-visible svg {
-  transform: translateY(-2px);
+.link-svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--green);
+  transition: transform 0.2s ease;
 }
 
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.3rem;
-  font-size: 0.72rem;
-  color: var(--text-dim);
+.terminal-link:hover .link-svg,
+.terminal-link:focus-visible .link-svg {
+  transform: scale(1.1);
 }
 
-.footer-bottom {
+.link-icon {
+  color: var(--green);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.terminal-link:hover .link-icon,
+.terminal-link:focus-visible .link-icon {
+  transform: translateX(4px);
+}
+
+.link-text {
+  font-family: var(--font-mono);
+}
+
+.footer-shutdown {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.8rem 2rem;
+  margin: 2rem auto 0;
+  padding-top: 2rem;
   border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.footer-bottom .prompt {
-  font-size: 0.72rem;
+.shutdown-text {
   color: var(--text-dim);
+  font-size: 0.75rem;
+}
+
+.shutdown-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
 }
 
 /* =========================================================
@@ -1053,12 +1090,12 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
+  .footer-links-grid {
+    grid-template-columns: 1fr;
   }
 
-  .footer-right {
+  .footer-shutdown {
+    flex-direction: column;
     align-items: flex-start;
   }
 }
@@ -1092,8 +1129,8 @@ footer {
     align-items: center;
   }
 
-  .footer-links {
-    gap: 0.5rem;
+  .footer-links-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Ajustar tabla de habilidades en móvil */
