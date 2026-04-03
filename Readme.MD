@@ -88,6 +88,7 @@ Landing page de portfolio personal construida con **HTML5 y CSS3 puro** (sin fra
 
 - [x] Diseño responsivo con breakpoints en `900px` y `600px`.
 - [x] Accesibilidad: `alt` descriptivos en todas las imágenes, `aria-label` en nav y links de redes, `aria-hidden="true"` en elementos puramente decorativos, `autocomplete` en inputs del formulario, skip link funcional.
+- [x] **Skip link funcional**: Al presionar la tecla **Espacio** o **Enter** en el skip link (primer elemento al navegar con Tab), se salta directamente al contenido principal (`#main`), mejorando la navegación por teclado.
 - [x] `transition: all` reemplazado por propiedades específicas en todos los selectores (mejor performance).
 - [x] `rel="noopener noreferrer"` en todos los `target="_blank"`.
 - [x] SVG de Next.js y Express con `fill="currentColor"` para visibilidad en tema oscuro.
