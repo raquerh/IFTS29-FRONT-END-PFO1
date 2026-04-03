@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este es la **Practica Formativa Obligatoria N° 1** de la materia FRONT END, correspondiente a la **Tecnicatura Superior en Desarrollo de Software (IFTS N°29)**.
+Este es la **Práctica Formativa Obligatoria N° 1** de la materia FRONT END, correspondiente a la **Tecnicatura Superior en Desarrollo de Software (IFTS N°29)**.
 
 Landing page de portfolio personal construida con **HTML5 y CSS3 puro** (sin frameworks ni librerías de JS). El diseño sigue una estética de terminal oscura / sci-fi, inspirada en el universo visual del anime cyberpunk y la ciencia ficción distópica.
 
@@ -16,85 +16,111 @@ Landing page de portfolio personal construida con **HTML5 y CSS3 puro** (sin fra
 
 - [x] Archivo `index.html` ubicado en la raíz.
 - [x] Carpeta `css` que contenga el archivo `styles.css`.
-- [x] Carpeta `img` (opcional — las imágenes se referencian desde URLs externas de Unsplash y DiceBear).
-- [x] Archivo `README.md` creado con descripción del TP y este checklist.
+- [x] (Opcional) Carpeta `media/img` para recursos gráficos.
+- [x] Archivo `README.md` creado, que incluya una breve descripción del TP y este checklist.
 
 ### Repositorio y Publicación
 
 - [x] Repositorio en GitHub creado.
 - [x] Proyecto subido al repositorio.
-- [x] Proyecto publicado en Vercel.
-- [x] URL de publicación indicada en este `README.md`.
+- [x] Proyecto publicado utilizando Vercel (alternativa a GitHub Pages).
+- [x] En el `README.md` se indica la URL de publicación.
 
 ### Uso de Google Fonts
 
-- [x] Enlace a Google Fonts incluido en la sección `head` del HTML (con `preconnect` para optimizar la carga).
+- [x] Enlace a Google Fonts incluido en la sección `head` del HTML.
 - [x] La tipografía importada se aplica en el sitio.
-- [x] **¿Por qué elegí estas fuentes?**
+- [x] **¿Por qué elegí esa fuente?**
 
   Usé **Fira Code** como fuente principal porque es monoespaciada y fue diseñada para código, lo que refuerza directamente la estética de terminal del sitio — cada carácter ocupa el mismo ancho, como en una consola real. **Syne** se usa para títulos y display: tiene una geometría muy marcada y peso tipográfico fuerte que contrasta bien con lo técnico de Fira Code. Juntas dicen "desarrolladora con criterio de diseño propio", no "template genérico".
 
 ### HTML
 
-- [x] El documento inicia con la declaración `DOCTYPE` y usa `lang="es"`.
-- [x] Metaetiquetas obligatorias: `charset` y `viewport`.
-- [x] Metaetiquetas adicionales: `description`, `keywords`, `author` y Open Graph para redes sociales.
-- [x] Título descriptivo: `Raquel.dev | Portfolio`.
-- [x] CSS y Google Fonts vinculados correctamente en el `head`.
-- [x] Barra de navegación (`nav`) con `aria-label` y 5 enlaces.
-- [x] `<main id="main">` correctamente identificado para el skip link de accesibilidad.
+- [x] El documento inicia con la declaración `DOCTYPE` y usa el atributo `lang="es"`.
+- [x] Se han incluido las metaetiquetas obligatorias: `charset` y `viewport`.
+- [x] Se ha definido un título descriptivo.
+- [x] Se han vinculado correctamente el archivo CSS y el enlace a Google Fonts.
 
-#### Secciones obligatorias en `main`:
+**Secciones obligatorias en `main`:**
 
-- [x] `#sobre-mi` — Presentación personal con imagen (avatar) y descripción.
-- [x] `#tarjetas` — 6 tarjetas de proyectos reales organizadas con CSS Grid.
-- [x] `#habilidades` — Grid de skills con tabla de XP + lista de tecnologías a aprender + soft skills.
-- [x] `#peliculas` — 3 películas favoritas (The Terminator, Ghost in the Shell, The Matrix) con imagen, año, título, descripción y director.
-- [x] `#contacto` — Formulario con campos nombre, apellido, email y teléfono, con `autocomplete` y `required`.
+- [x] **Presentación Personal** (id `sobre-mi`): Incluye párrafo descriptivo e imagen con atributo `alt`.
+- [x] **Tarjetas/Columnas** (id `tarjetas`): Contiene 6 tarjetas (más de las 2 requeridas), cada una con imagen y texto, organizadas con CSS Grid.
+- [x] **Listado de Habilidades** (id `habilidades`): Muestra de forma organizada mediante tabla las tecnologías que domino y las que deseo aprender.
+- [x] **Formulario de Contacto** (id `contacto`): Incluye campos Nombre, Apellido, Email, Teléfono y botón submit.
+- [x] **Películas Favoritas** (id `peliculas`): Presenta 3 películas con título, imagen y descripción.
 
-- [x] Al menos 4 comentarios explicativos en el HTML (hay más de 8, incluyendo notas de mejora futura).
+- [x] Barra de navegación (`nav`) presente y contiene 5 enlaces (más de los 3 requeridos).
+- [x] Se han insertado más de 4 comentarios explicativos en el código HTML.
 
 ### CSS
 
-- [x] Archivo `styles.css` con estilos personalizados.
-- [x] Selectores por clases e IDs en uso.
-- [x] Tipografía de Google Fonts aplicada globalmente con variables CSS (`--font-mono`, `--font-display`).
+- [x] Existe el archivo `styles.css` con estilos personalizados.
+- [x] Se utilizan selectores basados en clases e identificadores.
+- [x] La tipografía importada desde Google Fonts se aplica correctamente en todos los elementos.
 
-#### Layout y Organización:
+**Layout y Organización:**
 
-- [x] **CSS Grid** en: `.cards-grid`, `.habilidades-layout`, `.movies-grid`, `.skills-grid`, `.skill-item`, `.form-row`.
-- [x] **Flexbox** en: header, nav, `.sobre-mi-img-wrapper`, `.skills-quick`, `.card-top`, `.card-tags`, `.card-links-row`, footer y sus componentes internos.
-- [x] **¿Qué ventajas encontré al usar Flexbox o Grid?**
+- [x] Se ha organizado el layout (especialmente en la sección `tarjetas`) utilizando CSS Grid.
+- [x] **¿Qué ventajas encontraste al utilizar Flexbox o Grid en tu proyecto?**
 
   CSS Grid me permitió manejar layouts bidimensionales: por ejemplo, en las tarjetas una card con clase `card--wide` puede ocupar dos columnas con un solo `grid-column: span 2`, sin necesitar JavaScript ni cálculos manuales. Flexbox fue la herramienta ideal para elementos de una sola dimensión — una fila de links, un conjunto de tags, el nav — donde lo que importa es el flujo y el alineamiento, no la posición en una grilla. Usar ambos en conjunto es la práctica estándar en CSS moderno: cada uno resuelve lo que el otro no resuelve.
 
-#### Estilización de Componentes:
+**Estilización de Componentes:**
 
-- [x] Tabla de habilidades (`.skills-grid`) con header, filas y columnas personalizadas.
-- [x] Botones (`.btn-submit`, `.card-link`) con estilos personalizados y estado `:hover`/`:focus-visible`.
-- [x] Links de navegación y sociales con transiciones.
-- [x] Formulario con `input` personalizados, estados `:focus`, placeholder coloreado y labels destacados.
-- [x] Unidades relativas: `rem`, `%`, `vw`, `vh`, `ch`, `clamp()` usadas en todo el archivo.
-- [x] **Animaciones y transiciones implementadas:**
-  - **Glitch en el título** (`@keyframes glitch-1` y `glitch-2`): pseudo-elementos `::before`/`::after` con `clip-path` que simulan interferencia de señal. Es la primera cosa que ve el usuario y define la estética completa del sitio.
-  - **Cursor parpadeante** (`@keyframes blink`): simula un cursor de terminal activo. Pequeño detalle, alto impacto de inmersión.
-  - **Pulso del status dot** (`@keyframes pulse-dot`): el punto verde del header pulsa suavemente, reforzando la idea de "sistema online".
-  - **Borde animado del avatar** (`@keyframes border-rotate`): gradiente en rotación continua alrededor de la imagen de perfil.
-  - **Barras de XP** (`@keyframes load-bar`): se cargan de 0% al valor real al entrar a la página, como un RPG.
-  - **Hover en cards** (`transform: translateY(-4px)` + `box-shadow`): retroalimentación visual clara al interactuar.
-  - **Hover en botón submit** (`translateX(4px)` + fill de fondo): la animación horizontal refuerza la metáfora de "enviar".
+- [x] Se han personalizado los estilos de tablas, botones, enlaces y formularios.
+- [x] Se han ajustado las dimensiones de imágenes y contenedores utilizando unidades relativas (`%`, `rem`, `vh`, `clamp()`).
+- [x] Se ha implementado múltiples animaciones y transiciones (efecto hover en tarjetas, botones, glitch en título, cursor parpadeante, etc.).
+- [x] **¿Qué animación o transición implementaste y por qué consideraste que era adecuada para tu proyecto?**
+
+  Implementé múltiples animaciones para crear una experiencia inmersiva:
+  - **Glitch en el título** (`@keyframes glitch-1` y `glitch-2`): Simula interferencia de señal con pseudo-elementos y `clip-path`. Define la estética cyberpunk del sitio desde el primer momento.
+  - **Cursor parpadeante** (`@keyframes blink`): Refuerza la metáfora de terminal activo.
+  - **Pulso del status dot** (`@keyframes pulse-dot`): Indica "sistema online" de forma visual.
+  - **Borde animado del avatar** (`@keyframes border-rotate`): Gradiente en rotación continua que añade dinamismo.
+  - **Barras de XP** (`@keyframes load-bar`): Se cargan progresivamente como en un videojuego RPG.
+  - **Hover en cards y botones**: Retroalimentación visual clara con `transform` y `box-shadow`.
 
 ### Consideraciones Adicionales
 
-- [x] Diseño responsivo con breakpoints en `900px` y `600px`.
-- [x] Accesibilidad: `alt` descriptivos en todas las imágenes, `aria-label` en nav y links de redes, `aria-hidden="true"` en elementos puramente decorativos, `autocomplete` en inputs del formulario, skip link funcional.
-- [x] **Skip link funcional**: Al presionar la tecla **Espacio** o **Enter** en el skip link (primer elemento al navegar con Tab), se salta directamente al contenido principal (`#main`), mejorando la navegación por teclado.
-- [x] `transition: all` reemplazado por propiedades específicas en todos los selectores (mejor performance).
-- [x] `rel="noopener noreferrer"` en todos los `target="_blank"`.
-- [x] SVG de Next.js y Express con `fill="currentColor"` para visibilidad en tema oscuro.
-- [x] Inline `style` eliminado; reemplazado por clase `.card-links-row`.
-- [x] Nesting incorrecto de `.habilidades-col` corregido.
-- [x] `fill` de los SVGs de redes sociales unificado a `currentColor`.
+- [x] El diseño es responsivo y se visualiza correctamente en distintos dispositivos.
+- [x] Se aplicaron buenas prácticas de accesibilidad (por ejemplo, uso adecuado de atributos `alt` en las imágenes).
+- [x] Se añadieron comentarios adicionales donde se describen decisiones de diseño o la lógica de implementación.
+
+---
+
+## Características Adicionales Implementadas (Más Allá de la Consigna)
+
+El proyecto incluye funcionalidades y mejoras que superan los requerimientos obligatorios:
+
+**Accesibilidad Avanzada:**
+- Skip link funcional que permite saltar al contenido principal con teclado (Tab + Enter/Espacio).
+- Navegación por teclado completa con estados `:focus-visible` para indicadores visuales claros.
+- Atributos ARIA (`aria-label`, `aria-hidden`) usados correctamente en elementos decorativos y de navegación.
+- Atributo `autocomplete` en campos del formulario para mejor experiencia de usuario.
+
+**Optimización y Performance:**
+- Preconnect a Google Fonts para reducir latencia de carga.
+- Loading lazy en imágenes para mejor performance inicial.
+- Transiciones específicas (se evita `transition: all`) para mejor rendimiento.
+- Variables CSS para sistema de diseño centralizado y mantenible.
+
+**Diseño Visual Avanzado:**
+- Fondo Matrix animado (GIF) con opacidad controlada que cubre todo el sitio.
+- Footer original estilo terminal con comandos (`whoami`, `ls`, `cat`, `shutdown`) en lugar del típico footer con íconos.
+- Efectos visuales: scanlines, glitch effect, bordes animados con gradientes, barras de progreso estilo RPG.
+- Scrollbar personalizada para mantener la estética del sitio.
+- Responsive fluido con uso extensivo de `clamp()` para escalado gradual sin saltos bruscos.
+
+**Estructura y Semántica:**
+- HTML semántico con uso correcto de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`.
+- Estructura limpia sin divs innecesarios, cada elemento tiene un propósito específico.
+- Más de 10 comentarios explicativos distribuidos en el HTML (se requieren mínimo 4).
+- 5 enlaces en la navegación (se requieren mínimo 3).
+- 6 tarjetas de proyectos (se requieren mínimo 2).
+
+**Seguridad:**
+- `rel="noopener noreferrer"` en todos los links externos para prevenir vulnerabilidades.
+- Validación de formulario con campos `required` y tipos de input correctos (`email`, `tel`).
 
 ---
 
